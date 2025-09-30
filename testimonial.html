@@ -80,7 +80,7 @@
         font-size: 15px;
         color: #fff;
       }
-            /* Hide any extra logos inside the brand (keep only the first image) */
+      /* Hide any extra logos inside the brand (keep only the first image) */
       .navbar.navbar-primary .navbar-brand .logo:not(:first-of-type) {
         display: none !important;
       }
@@ -103,6 +103,51 @@
       @media (max-width: 991.98px) {
         .navbar.navbar-primary .navbar-brand .logo {
           height: 52px;
+        }
+      }
+      /* Testimonials Page Custom Styles */
+
+      .testimonials {
+        margin-top: 40px;
+      }
+
+      .testimonial-box {
+        background: #fff;
+        border: 1px solid #eee;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+
+      .testimonial-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-box .quote {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 20px;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .testimonial-box .profile h5 {
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .testimonial-box .profile span {
+        font-size: 13px;
+        color: #777;
+      }
+
+      /* Responsive */
+      @media (max-width: 767px) {
+        .testimonial-box {
+          margin-bottom: 20px;
         }
       }
     </style>
@@ -132,7 +177,7 @@
     </script>
   </head>
   <body class="site-body style-v1">
-   <header class="site-header header-s1 is-transparent is-sticky">
+    <header class="site-header header-s1 is-transparent is-sticky">
       <!-- Topbar -->
       <div class="topbar">
         <div class="container">
@@ -141,7 +186,11 @@
               <ul class="top-contact clearfix">
                 <li class="t-email t-email1">
                   <em class="fa fa-envelope-o" aria-hidden="true"></em>
-                  <span><a href="#">info@ankitpanchalfinance.com</a></span>
+                  <span
+                    ><a href="mailto:info@ankitpanchalfinance.com"
+                      >info@ankitpanchalfinance.com</a
+                    ></span
+                  >
                 </li>
                 <li class="t-phone t-phone1">
                   <em class="fa fa-phone" aria-hidden="true"></em>
@@ -155,7 +204,7 @@
       <!-- #end Topbar -->
       <!-- Navbar -->
       <div class="navbar navbar-primary">
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between ;">
           <!-- Logo -->
           <a class="navbar-brand" href="index.html">
             <img
@@ -214,7 +263,8 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="testimonial.html">Resources</a></li>
+              <li><a href="resources.html">Resources</a></li>
+
               <li><a href="testimonial.html">Testimonial</a></li>
               <li><a href="consulatant.html">Free Consultation</a></li>
               <li class="quote-btn">
@@ -225,15 +275,13 @@
           <!-- #end MainNav -->
         </div>
       </div>
-     
+
       <div
         id="slider"
         class="banner banner-slider slider-large carousel slide carousel-fade"
       >
-     
         <div class="carousel-inner">
           <div class="item active">
-           
             <div
               class="fill"
               style="background-image: url('image/slider-lg-a.jpg')"
@@ -275,7 +323,7 @@
                         insights by embedding economics across their
                         organization’s strategy.
                       </p>
-                      <a href="#" class="btn">Learn more</a>
+                      <a href="contact.html" class="btn">Learn more</a>
                     </div>
                   </div>
                 </div>
@@ -311,90 +359,66 @@
       </div>
       <!-- #end Banner/Slider -->
     </header>
-
-    <!-- Content -->
-    <div class="section section-contents section-pad">
+    <!-- Testimonials Section -->
+    <div class="section section-pad">
       <div class="container">
-        <div class="row">
-          <div class="wide-md">
-            <div class="testimonials testimonials-list">
-              <div class="quotes">
-                <div class="quotes-text">
-                  <p>
-                    <i
-                      >Ankit helped us plan for our daughter’s education and
-                      gave us peace of mind for the future. Truly
-                      trustworthy!</i
-                    >
-                  </p>
-                </div>
-                <div class="profile">
-                  <h5>Mehta Family,</h5>
-                  <h6>Ahmedabad.</h6>
-                </div>
+        <div class="row text-center">
+          <div class="col-md-8 col-md-offset-2">
+            <h2 class="heading-section">Testimonials</h2>
+            <p class="sub-heading">
+              Hear directly from the people who trusted us with their financial
+              future.
+            </p>
+          </div>
+        </div>
+
+        <div class="row testimonials">
+          <!-- Testimonial 1 -->
+          <div class="col-md-4 col-sm-6 m-b-30">
+            <div class="testimonial-box">
+              <p class="quote">
+                “Ankit helped us plan for our daughter’s education and gave us
+                peace of mind for the future. Truly trustworthy!”
+              </p>
+              <div class="profile">
+                <h5>Mehta Family</h5>
+                <span>Ahmedabad</span>
               </div>
-              <div class="quotes">
-                <div class="quotes-text">
-                  <p>
-                    <i
-                      >Ankit guided us with patience and clarity. Thanks to him, our retirement is secure and stress-free</i
-                    >
-                  </p>
-                </div>
-                <div class="profile">
-                  <h5>Patel Family, </h5>
-                  <h6>Gandhinagar.</h6>
-                </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="col-md-4 col-sm-6 m-b-30">
+            <div class="testimonial-box">
+              <p class="quote">
+                “Ankit guided us with patience and clarity. Thanks to him, our
+                retirement is secure and stress-free.”
+              </p>
+              <div class="profile">
+                <h5>Patel Family</h5>
+                <span>Gandhinagar</span>
               </div>
-              <div class="quotes">
-                <div class="quotes-text">
-                  <p>
-                    <i
-                      >We were confused about loans and investments. Ankit made everything simple and easy.</i
-                    >
-                  </p>
-                </div>
-                <div class="profile">
-                  <h5>Shah Brothers, </h5>
-                  <h6>Ahmedabad.</h6>
-                </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="col-md-4 col-sm-6 m-b-30">
+            <div class="testimonial-box">
+              <p class="quote">
+                “We were confused about loans and investments. Ankit made
+                everything simple and easy.”
+              </p>
+              <div class="profile">
+                <h5>Shah Brothers</h5>
+                <span>Ahmedabad</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- End Content -->
-    <!-- Client logo -->
-    <div class="section section-logos section-pad-sm bg-light bdr-top">
-      <div class="container">
-        <div class="content row">
-          <div class="owl-carousel loop logo-carousel style-v2">
-            <div class="logo-item">
-              <img alt="" width="190" height="82" src="image/cl-logo1-w.png" />
-            </div>
-            <div class="logo-item">
-              <img alt="" width="190" height="82" src="image/cl-logo2-w.png" />
-            </div>
-            <div class="logo-item">
-              <img alt="" width="190" height="82" src="image/cl-logo3-w.png" />
-            </div>
-            <div class="logo-item">
-              <img alt="" width="190" height="82" src="image/cl-logo4-w.png" />
-            </div>
-            <div class="logo-item">
-              <img alt="" width="190" height="82" src="image/cl-logo5-w.png" />
-            </div>
-            <div class="logo-item">
-              <img alt="" width="190" height="82" src="image/cl-logo6-w.png" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Section -->
+    
 
-    <!-- Call Action -->
     <div
       class="call-action cta-small has-bg bg-primary"
       style="background-image: url('image/plx-cta.jpg')"
@@ -522,11 +546,11 @@
         <div class="row">
           <div class="row">
             <div class="site-copy col-sm-7">
-              <p>&copy; Ankit Panchal & Associates <a href="#">Policy</a></p>
+              <p>&copy; Ankit Panchal & Associates <a href="privacy.html">Policy</a></p>
             </div>
             <div class="site-by col-sm-5 al-right">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms And Condition</a>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms And Condition</a>
             </div>
           </div>
         </div>

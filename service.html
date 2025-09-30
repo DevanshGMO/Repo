@@ -79,30 +79,7 @@
       .cp-custom i {
         font-size: 15px;
         color: #fff;
-      }/* Hide any extra logos inside the brand (keep only the first image) */
-.navbar.navbar-primary .navbar-brand .logo:not(:first-of-type) {
-  display: none !important;
-}
-
-/* Size the visible (first) logo */
-.navbar.navbar-primary .navbar-brand .logo:first-of-type {
-  display: inline-block !important;
-  height: 80px !important;   /* desktop size */
-  width: auto !important;
-  max-height: none !important;
-}
-
-/* Mobile/tablet size */
-@media (max-width: 991.98px) {
-  .navbar.navbar-primary .navbar-brand .logo:first-of-type {
-    height: 52px !important;
-  }
-}
-
-@media (max-width: 991.98px){
-  .navbar.navbar-primary .navbar-brand .logo{ height:52px; }
-}
-      /* Hide any extra logos inside the brand (keep only the first image) */
+      }      /* Hide any extra logos inside the brand (keep only the first image) */
       .navbar.navbar-primary .navbar-brand .logo:not(:first-of-type) {
         display: none !important;
       }
@@ -110,6 +87,7 @@
       /* Size the visible (first) logo */
       .navbar.navbar-primary .navbar-brand .logo:first-of-type {
         display: inline-block !important;
+        align-items: center !important;
         height: 80px !important; /* desktop size */
         width: auto !important;
         max-height: none !important;
@@ -124,7 +102,7 @@
 
       @media (max-width: 991.98px) {
         .navbar.navbar-primary .navbar-brand .logo {
-          height: 52px;
+          height: fit-content !important;
         }
       }
     </style>
@@ -154,8 +132,7 @@
     </script>
   </head>
   <body class="site-body style-v1">
-    <!-- Header -->
-      <header class="site-header header-s1 is-transparent is-sticky">
+    <header class="site-header header-s1 is-transparent is-sticky">
       <!-- Topbar -->
       <div class="topbar">
         <div class="container">
@@ -164,7 +141,7 @@
               <ul class="top-contact clearfix">
                 <li class="t-email t-email1">
                   <em class="fa fa-envelope-o" aria-hidden="true"></em>
-                  <span><a href="#">info@ankitpanchalfinance.com</a></span>
+                 <span><a href="mailto:info@ankitpanchalfinance.com">info@ankitpanchalfinance.com</a></span>
                 </li>
                 <li class="t-phone t-phone1">
                   <em class="fa fa-phone" aria-hidden="true"></em>
@@ -178,7 +155,7 @@
       <!-- #end Topbar -->
       <!-- Navbar -->
       <div class="navbar navbar-primary">
-        <div class="container">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between ;">
           <!-- Logo -->
           <a class="navbar-brand" href="index.html">
             <img
@@ -220,24 +197,25 @@
               <li class="dropdown"><a href="index.html">Home</a></li>
               <li class="dropdown"><a href="about-us.html">About us</a></li>
               <li class="dropdown">
-                <a href="service.html" class="dropdown-toggle active"
+                <a href="service.html" class="dropdown-toggle"
                   >Services <b class="caret"></b
                 ></a>
                 <ul class="dropdown-menu">
                   <li><a href="Retirement.html">Retirement Planning</a></li>
                   <li><a href="Insurance.html">Insurance Planning</a></li>
-                  <li><a href="service-single.html">Loan Advisory</a></li>
+                  <li><a href="Loan.html">Loan Advisory</a></li>
+                  <li><a href="Tax.html">Tax Planning</a></li>
                   <li>
-                    <a href="service-single-alter.html">Investment Planning</a>
+                    <a href="Investment.html">Investment Planning</a>
                   </li>
                   <li>
-                    <a href="service-single-alter.html"
+                    <a href="Children.html"
                       >Children’s Education Planning</a
                     >
                   </li>
                 </ul>
               </li>
-              <li><a href="testimonial.html">Resources</a></li>
+              <li><a href="resources.html">Resources</a></li>
               <li><a href="testimonial.html">Testimonial</a></li>
               <li><a href="consulatant.html">Free Consultation</a></li>
               <li class="quote-btn">
@@ -275,7 +253,7 @@
                         Ankit Panchal – Your Friendly Financial Consultant in
                         Ahmedabad
                       </p>
-                      <a href="#" class="btn"
+                      <a href="contact.html" class="btn"
                         >Book Your 30-Minute Free Consultation Now</a
                       >
                     </div>
@@ -299,7 +277,7 @@
                         insights by embedding economics across their
                         organization’s strategy.
                       </p>
-                      <a href="#" class="btn">Learn more</a>
+                      <a href="contact.html" class="btn">Learn more</a>
                     </div>
                   </div>
                 </div>
@@ -335,13 +313,11 @@
       </div>
       <!-- #end Banner/Slider -->
     </header>
-    <!-- End Header -->
-    <!-- Service Section -->
     <div class="section section-services section-pad">
       <div class="container">
         <div class="content row">
           <div class="wide-md center">
-            <h2 class="heading-lead">Retirement Planning</h2>
+            <h2 class="heading-lead">Our Services</h2>
             <p>
               Retirement should be about enjoying life, not worrying about
               money. I help you create a clear, step-by-step plan so you can
@@ -353,7 +329,7 @@
             <div class="col-md-4 col-sm-6 even first">
               <!-- feature box -->
               <div class="feature boxed">
-                <a href="#">
+                <a href="insurance.html">
                   <div class="fbox-photo">
                     <img src="image/photo-sm-a.jpg" alt="" />
                   </div>
@@ -364,7 +340,7 @@
                     From health to life insurance, choosing the right coverage can be overwhelming. I simplify the process and ensure you’re protected without overpaying.
                   </p>
                   <p>
-                    <a href="#" class="btn-link link-arrow-sm">Learn More</a>
+                    <a href="insurance.html" class="btn-link link-arrow-sm">Learn More</a>
                   </p>
                 </div>
               </div>
@@ -373,7 +349,7 @@
             <div class="col-md-4 col-sm-6 odd">
               <!-- feature box -->
               <div class="feature boxed">
-                <a href="#">
+                <a href="Loan.html">
                   <div class="fbox-photo">
                     <img src="image/photo-sm-b.jpg" alt="" />
                   </div>
@@ -384,7 +360,7 @@
                    Whether it’s a home loan, personal loan, or business loan, I guide you through smart borrowing decisions to save money and reduce stress.
                   </p>
                   <p>
-                    <a href="#" class="btn-link link-arrow-sm">Learn More</a>
+                    <a href="Loan.html" class="btn-link link-arrow-sm">Learn More</a>
                   </p>
                 </div>
               </div>
@@ -393,18 +369,18 @@
             <div class="col-md-4 col-sm-6 even">
               <!-- feature box -->
               <div class="feature boxed">
-                <a href="#">
+                <a href="Investment.html">
                   <div class="fbox-photo">
                     <img src="image/photo-sm-c.jpg" alt="" />
                   </div>
                 </a>
                 <div class="fbox-content">
-                  <h3 class="lead"><a href="#">Investment Planning</a></h3>
+                  <h3 class="lead"><a href="Investment.html">Investment Planning</a></h3>
                   <p>
                     I help you invest wisely across mutual funds, equities, and other instruments – balancing risk and reward to grow your wealth.
                   </p>
                   <p>
-                    <a href="#" class="btn-link link-arrow-sm">Learn More</a>
+                    <a href="Investment.html" class="btn-link link-arrow-sm">Learn More</a>
                   </p>
                 </div>
               </div>
@@ -413,18 +389,18 @@
             <div class="col-md-4 col-sm-6 odd first">
               <!-- featured box -->
               <div class="feature boxed">
-                <a href="#">
+                <a href="Tax.html">
                   <div class="fbox-photo">
                     <img src="image/photo-sm-d.jpg" alt="" />
                   </div>
                 </a>
                 <div class="fbox-content">
-                  <h3 class="lead"><a href="#">Tax Planning</a></h3>
+                  <h3 class="lead"><a href="Tax.html">Tax Planning</a></h3>
                   <p>
                    Don’t let taxes eat into your hard-earned money. With the right strategies, you can save more and stay compliant.
                   </p>
                   <p>
-                    <a href="#" class="btn-link link-arrow-sm">Learn More</a>
+                    <a href="Tax.html" class="btn-link link-arrow-sm">Learn More</a>
                   </p>
                 </div>
               </div>
@@ -433,18 +409,18 @@
             <div class="col-md-4 col-sm-6 odd">
               <!-- featured box -->
               <div class="feature boxed">
-                <a href="#">
+                <a href="Children.html">
                   <div class="fbox-photo">
                     <img src="image/photo-sm-e.jpg" alt="" />
                   </div>
                 </a>
                 <div class="fbox-content">
-                  <h3 class="lead"><a href="#">Children’s Education Planning</a></h3>
+                  <h3 class="lead"><a href="Children.html">Children’s Education Planning</a></h3>
                   <p>
                Give your children the best start in life. I help you prepare financially for school, college, and higher education – so nothing stands in their way.
                   </p>
                   <p>
-                    <a href="#" class="btn-link link-arrow-sm">Learn More</a>
+                    <a href="Children.html" class="btn-link link-arrow-sm">Learn More</a>
                   </p>
                 </div>
               </div>
@@ -453,19 +429,19 @@
             <div class="col-md-4 col-sm-6 odd">
               <!-- featured box -->
               <div class="feature boxed">
-                <a href="#">
+                <a href="retirement.html">
                   <div class="fbox-photo">
                     <img src="image/photo-sm-f.jpg" alt="" />
                   </div>
                 </a>
                 <div class="fbox-content">
-                  <h3 class="lead"><a href="#">Business Audit</a></h3>
+                  <h3 class="lead"><a href="retirement.html">Retirement Planning</a></h3>
                   <p>
                     Lorem ipsum dolor sit amet, conse ctetur adip isicing elit,
                     sed do eius mod tempor incididunt fuga platea ut labore et.
                   </p>
                   <p>
-                    <a href="#" class="btn-link link-arrow-sm">Learn More</a>
+                    <a href="retirement.html" class="btn-link link-arrow-sm">Learn More</a>
                   </p>
                 </div>
               </div>
@@ -519,7 +495,7 @@
                 We're here to help. Send us an email or call us at +91 98765
                 43210. Please feel free to contact our expert
               </p>
-              <a class="btn btn-alt" href="#">Contact Us</a>
+              <a class="btn btn-alt" href="contact.html">Contact Us</a>
             </div>
           </div>
         </div>
@@ -527,7 +503,7 @@
     </div>
     <!-- End Section -->
 
- <div class="footer-widget style-v2 section-pad-md">
+   <div class="footer-widget style-v2 section-pad-md">
       <div class="container">
         <div class="row">
           <div class="widget-row row">
@@ -561,11 +537,13 @@
                 <div class="wgs-content">
                   <ul class="menu">
                     <li><a href="Retirement.html">Retirement Planning</a></li>
-                    <li><a href="#">Insurance Planning</a></li>
-                    <li><a href="#">Loan Advisory</a></li>
-                    <li><a href="#">Investment Planning</a></li>
-                    <li><a href="#">Tax Planning</a></li>
-                    <li><a href="#">Children’s Education Planning</a></li>
+                    <li><a href="insurance.html">Insurance Planning</a></li>
+                    <li><a href="Loan.html">Loan Advisory</a></li>
+                    <li><a href="Investment.html">Investment Planning</a></li>
+                    <li><a href="Tax.html">Tax Planning</a></li>
+                    <li>
+                      <a href="Children.html">Children’s Education Planning</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -577,13 +555,13 @@
                 <h5 class="wgs-title">Quick Links</h5>
                 <div class="wgs-content">
                   <ul class="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Resources</a></li>
-                    <li><a href="#">Free Consultation</a></li>
-                    <li><a href="#">Testimonial</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="consulatant.html">Free Consultation</a></li>
+                    <li><a href="testimonial.html">Testimonial</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                   </ul>
                 </div>
               </div>
@@ -625,19 +603,17 @@
         </div>
       </div>
     </div>
-    <!-- End Footer Widget -->
-
-    <!-- Copyright -->
+  
     <div class="copyright style-v2">
       <div class="container">
         <div class="row">
           <div class="row">
             <div class="site-copy col-sm-7">
-              <p>&copy; Ankit Panchal & Associates <a href="#">Policy</a></p>
+              <p>&copy; Ankit Panchal & Associates <a href="privacy.html">Policy</a></p>
             </div>
             <div class="site-by col-sm-5 al-right">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms And Condition</a>
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms And Condition</a>
             </div>
           </div>
         </div>

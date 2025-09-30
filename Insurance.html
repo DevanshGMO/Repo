@@ -1,173 +1,611 @@
 <!DOCTYPE html>
 <html lang="zxx">
-<head>
-  <title>Insurance Planning | Ankit Panchal & Associates - Financial Services</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="image/Logomain.png" type="image/png" sizes="16x16">
-  <link rel="stylesheet" type="text/css" href="css/vendor.bundle.css">
-  <link id="style-css" rel="stylesheet" type="text/css" href="css/styles.css">
-</head>
-<body class="site-body style-v1"><!-- Header -->
-<header class="site-header header-s1 is-transparent is-sticky">
-  <div class="topbar">
-    <div class="container">
-      <div class="row">
-        <div class="top-aside top-left">
-          <ul class="top-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="top-aside top-right clearfix">
-          <ul class="top-contact clearfix">
-            <li class="t-email t-email1">
-              <em class="fa fa-envelope-o" aria-hidden="true"></em>
-              <span><a href="mailto:info@ankitpanchalfinance.com">info@ankitpanchalfinance.com</a></span>
-            </li>
-            <li class="t-phone t-phone1">
-              <em class="fa fa-phone" aria-hidden="true"></em>
-              <span>+91 98765 43210</span>
-            </li>
-          </ul>
+  <head>
+    <title>
+      Ankit Panchal & Associates- Financial Services and Business Consulting
+      Template
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="image/Logomain.png" type="image/png" sizes="16x16" />
+    <link rel="stylesheet" type="text/css" href="css/vendor.bundle.css" />
+    <link
+      id="style-css"
+      rel="stylesheet"
+      type="text/css"
+      href="css/styles.css"
+    />
+    <style type="text/css">
+      /* Only Demo Purpose */
+      .colorPanel {
+        margin: 0px;
+        padding: 5px;
+        position: fixed;
+        z-index: 100;
+        min-width: 20px;
+        border-radius: 0 3px 3px 0;
+        background-color: #4b00a0;
+        top: 35%;
+        text-align: center;
+      }
+      .colorPanel ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        display: none;
+      }
+      .colorPanel ul li {
+        display: block;
+        margin-top: 10px;
+      }
+      .colorPanel ul a {
+        display: block;
+        margin: 0 auto;
+        width: 20px;
+        height: 20px;
+        border: #fff 1px solid;
+      }
+      .colorPanel a.cart,
+      .colorPanel a.home-solid {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 6px;
+        padding-bottom: 8px;
+        display: block;
+      }
+      .colorPanel a.home-solid i {
+        display: block;
+        margin: 12px auto 4px;
+      }
+      .colorPanel a.home-solid {
+        color: #fff;
+        font-weight: bold;
+        font-size: 9px;
+        text-transform: uppercase;
+      }
+      #cpToggle {
+        display: block;
+        height: 30px;
+        margin: 0 auto;
+        width: 28px;
+        line-height: 30px;
+        background-size: cover;
+      }
+      .cp-custom {
+        padding: 12px;
+      }
+      .cp-custom #cpToggle {
+        background: none;
+      }
+      .cp-custom i {
+        font-size: 15px;
+        color: #fff;
+      }
+      /* Hide any extra logos inside the brand (keep only the first image) */
+      .navbar.navbar-primary .navbar-brand .logo:not(:first-of-type) {
+        display: none !important;
+      }
+
+      /* Size the visible (first) logo */
+      .navbar.navbar-primary .navbar-brand .logo:first-of-type {
+        display: inline-block !important;
+        height: 80px !important; /* desktop size */
+        width: auto !important;
+        max-height: none !important;
+      }
+
+      /* Mobile/tablet size */
+      @media (max-width: 991.98px) {
+        .navbar.navbar-primary .navbar-brand .logo:first-of-type {
+          height: 52px !important;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .navbar.navbar-primary .navbar-brand .logo {
+          height: 52px;
+        }
+      }
+      /* Service Detail Page Styles */
+
+      .banner-page {
+        padding: 80px 0;
+        background: #f5f5f5;
+        text-align: center;
+      }
+      .banner-page h1 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .banner-page p {
+        font-size: 16px;
+        color: #555;
+      }
+
+      .service-detail h2,
+      .service-detail h3 {
+        margin-top: 25px;
+        font-weight: 600;
+      }
+      .service-detail p {
+        margin-bottom: 15px;
+        line-height: 1.7;
+      }
+      .service-detail .list-style {
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .service-detail .list-style li {
+        margin-bottom: 8px;
+      }
+
+      .cta-box {
+        background: #f7f9fc;
+        border: 1px solid #e3e6ea;
+        padding: 20px;
+        margin-top: 30px;
+        text-align: center;
+        border-radius: 6px;
+      }
+      .cta-box h4 {
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+      .cta-box .btn {
+        margin-top: 10px;
+      }
+
+      /* Sidebar */
+      .sidebar .widget {
+        background: #fafafa;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+      }
+      .sidebar .wgs-title {
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      /* Responsive */
+      @media (max-width: 767px) {
+        .banner-page {
+          padding: 50px 0;
+        }
+      }
+    </style>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "../../www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-91615293-2", "auto");
+      ga("send", "pageview");
+    </script>
+  </head>
+  <body class="site-body style-v1">
+    <!-- Header -->
+    <header class="site-header header-s1 is-transparent is-sticky">
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="container">
+          <div class="row">
+            <div class="top-aside top-center clearfix">
+              <ul class="top-contact clearfix">
+                <li class="t-email t-email1">
+                  <em class="fa fa-envelope-o" aria-hidden="true"></em>
+                  <span
+                    ><a href="mailto:info@ankitpanchalfinance.com"
+                      >info@ankitpanchalfinance.com</a
+                    ></span
+                  >
+                </li>
+                <li class="t-phone t-phone1">
+                  <em class="fa fa-phone" aria-hidden="true"></em>
+                  <span>+91 98765 43210</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="navbar navbar-primary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img class="logo logo-dark" alt="Ankit Panchal & Associates" src="image/Logomain.png" srcset="image/logo2x.png 2x">
-        <img class="logo logo-light" alt="" src="image/logo-light.png" srcset="image/logo-light2x.png 2x">
-      </a>
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnav" aria-expanded="false">
-          <span class="sr-only">Menu</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="quote-btn"><a class="btn" href="consultation.html">Free Consultation</a></div>
-      </div>
-      <nav class="navbar-collapse collapse" id="mainnav">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About</a></li>
-          <li class="dropdown active"><a href="service.html">Services</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li class="quote-btn"><a class="btn" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header><div class="banner banner-static">
-  <div class="banner-cpn">
-    <div class="container">
-      <div class="content row">
-        <div class="banner-text">
-          <h1 class="page-title">Insurance Planning</h1>
-          <p>From health to life insurance, I simplify choices and make sure you’re protected without overpaying.</p>
+      <!-- #end Topbar -->
+      <!-- Navbar -->
+      <div class="navbar navbar-primary">
+        <div
+          class="container"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+        >
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img
+              class="logo logo-light"
+              alt="Ankit Panchal & Associates"
+              src="image/Logomain.png"
+              srcset="image/logo-light2x.png 2x"
+            />
+
+            <img
+              class="logo logo-light"
+              alt=""
+              src="image/Logomain.png"
+              srcset="image/logo-light2x.png 2x"
+            />
+          </a>
+          <!-- #end Logo -->
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#mainnav"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Menu</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Q-Button for Mobile -->
+            <div class="quote-btn">
+              <a class="btn" href="get-a-quote.html">Sign in</a>
+            </div>
+          </div>
+          <!-- MainNav -->
+          <nav class="navbar-collapse collapse" id="mainnav">
+            <ul class="nav navbar-nav">
+              <li class="dropdown"><a href="index.html">Home</a></li>
+              <li class="dropdown"><a href="about-us.html">About us</a></li>
+              <li class="dropdown">
+                <a href="service.html" class="dropdown-toggle"
+                  >Services <b class="caret"></b
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="Retirement.html">Retirement Planning</a></li>
+                  <li><a href="Insurance.html">Insurance Planning</a></li>
+                  <li><a href="Loan.html">Loan Advisory</a></li>
+                  <li><a href="Tax.html">Tax Planning</a></li>
+                  <li>
+                    <a href="Investment.html">Investment Planning</a>
+                  </li>
+                  <li>
+                    <a href="Children.html">Children’s Education Planning</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="testimonial.html">Testimonial</a></li>
+              <li><a href="consulatant.html">Free Consultation</a></li>
+              <li class="quote-btn">
+                <a class="btn" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- #end MainNav -->
         </div>
-        <div class="page-breadcrumb">
-          <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="service.html">Services</a></li>
-            <li class="active"><span>Insurance Planning</span></li>
-          </ul>
-        </div>
       </div>
-    </div>
-  </div>
-  <div class="banner-bg imagebg">
-    <img src="image/banner-inside-b.jpg" alt="" />
-  </div>
-</div><div class="section section-services section-pad">
-  <div class="container">
-    <div class="content row">
-      <h2>
-        <img src="image/photo-sm-k.jpg" alt="" class="alignright col-md-4 no-round">
-        How I Help
-      </h2>
-      <p>Plain-language guidance, unbiased recommendations, and a practical plan you can follow. We’ll select cover that fits your goals, timeline, and budget—no pushy sales.</p>
-      <div class="clear"></div>
-      <div class="gaps size-xs"></div>
-      <div class="feature-intro">
+      <!-- #end Navbar -->
+      <!-- Banner/Slider -->
+      <div
+        id="slider"
+        class="banner banner-slider slider-large carousel slide carousel-fade"
+      >
+          <div class="carousel-inner">
+          <div class="item active">
+            <!-- Set the first background image using inline CSS below. -->
+            <div
+              class="fill"
+              style="background-image: url('image/slider-lg-a.jpg')"
+            >
+              <div class="banner-content">
+                <div class="container">
+                  <div class="row">
+                    <div class="banner-text al-center pos-center light">
+                      <h2>
+                        Investment Planning<strong>.</strong>
+                      </h2> 
+                      <a href="contact.html" class="btn"
+                        >Book Your 30-Minute Free Consultation Now</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a
+          class="left carousel-control"
+          href="#slider"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-left"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="right carousel-control"
+          href="#slider"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="glyphicon glyphicon-chevron-right"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <!-- #end Banner/Slider -->
+    </header>
+
+    <!-- hello -->
+    <div class="section section-pad">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-4 res-s-bttm">
-            <div class="icon-box style-s1">
-              <em class="fa fa-check-square-o" aria-hidden="true"></em>
+          <div class="col-md-8 col-sm-12">
+            <div class="service-detail">
+              <img
+                src="image/two.jpg"
+                alt="Insurance Planning"
+                class="img-responsive m-b-30"
+              />
+              <h2>Why Insurance Planning Matters</h2>
+              <p>
+                From health to life insurance, choosing the right coverage can
+                be overwhelming. Many families either overpay for unnecessary
+                benefits or stay underinsured, leaving them vulnerable.
+                Insurance is not just a policy—it’s peace of mind for you and
+                your loved ones.
+              </p>
+
+              <h3>How I Can Help You</h3>
+              <ul class="list-style">
+                <li>Evaluate your family’s exact protection needs</li>
+                <li>Compare multiple providers to ensure best value</li>
+                <li>Simplify complex terms into clear guidance</li>
+                <li>Balance coverage with affordability—no overselling</li>
+                <li>Ensure policies complement your overall financial plan</li>
+              </ul>
+
+              <h3>Types of Insurance We Cover</h3>
+              <ul class="list-style">
+                <li>
+                  <strong>Health Insurance</strong> – Protect against rising
+                  medical costs
+                </li>
+                <li>
+                  <strong>Life Insurance</strong> – Secure your family’s future
+                  in case of emergencies
+                </li>
+                <li>
+                  <strong>Critical Illness & Disability Cover</strong> – Extra
+                  safety net for uncertain times
+                </li>
+                <li>
+                  <strong>Term Insurance</strong> – Affordable, high-value life
+                  coverage
+                </li>
+              </ul>
+
+              <h3>Common Questions I Answer</h3>
+              <ul class="list-style">
+                <li>How much life insurance coverage do I actually need?</li>
+                <li>Which health plan is best for my family?</li>
+                <li>
+                  Should I take individual or family floater health insurance?
+                </li>
+                <li>What riders (add-ons) are worth paying for?</li>
+              </ul>
+
+              <div class="cta-box">
+                <h4>Ready to secure your family’s future?</h4>
+                <p>
+                  Book a free consultation and let’s find the right insurance
+                  plan for you.
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-sm"
+                  >Book Free Consultation</a
+                >
+              </div>
             </div>
-            <h4>Trust &amp; Transparency</h4>
-            <p>Zero jargon. You’ll understand exactly what you’re buying and why.</p>
           </div>
-          <div class="col-sm-4 res-s-bttm">
-            <div class="icon-box style-s1">
-              <em class="fa fa-sliders" aria-hidden="true"></em>
-            </div>
-            <h4>Personalized Plans</h4>
-            <p>Coverage tuned to your family, city, and budget—nothing extra.</p>
-          </div>
-          <div class="col-sm-4">
-            <div class="icon-box style-s1">
-              <em class="fa fa-map-marker" aria-hidden="true"></em>
-            </div>
-            <h4>Local Expertise</h4>
-            <p>Ahmedabad–Gujarat context, with practical, long-term thinking.</p>
+
+          <!-- Sidebar -->
+          <div class="col-md-4 col-sm-12">
+            <aside class="sidebar">
+              <div class="widget">
+                <h4 class="wgs-title">Other Services</h4>
+                <ul class="menu">
+                  <li><a href="retirement.html">Retirement Planning</a></li>
+                  <li><a href="Loan.html">Loan Advisory</a></li>
+                  <li><a href="Investment.html">Investment Planning</a></li>
+                  <li>
+                    <a href="Children.html">Children’s Education Planning</a>
+                  </li>
+                  <li><a href="Tax.html">Tax Planning</a></li>
+                </ul>
+              </div>
+              <div class="widget">
+                <h4 class="wgs-title">Download</h4>
+                <p>
+                  Get your <strong>Financial Planning Checklist</strong> to
+                  start today.
+                </p>
+                <a
+                  href="ebook-financial-checklist.pdf"
+                  class="btn btn-alt btn-sm btn-block-sm"
+                  >Download Now</a
+                >
+              </div>
+            </aside>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div><div class="section section-contents section-pad has-bg has-parallax light" style="background-image: url('image/plx-dark.jpg');">
-  <div class="container">
-    <div class="content row">
-      <h2>Your Insurance Plan Can Include</h2>
-      <div class="row">
-        <div class="col-sm-5 res-m-bttm">
-          <p>We’ll map needs first, then pick simple, reliable policies. Expect clear explanations, sensible sums insured, and annual reviews so your cover keeps up with life.</p>
-        </div>
-        <div class="col-sm-3 col-sm-offset-1 res-m-bttm-xs">
-          <ul class="list-style">
-            <li>Health Insurance (individual / family floater)</li><li>Term Life Insurance</li>
-          </ul>
-        </div>
-        <div class="col-sm-3">
-          <ul class="list-style">
-            <li>Waiting periods & exclusions review</li><li>Annual policy check-ups</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><div class="call-action cta-small has-bg bg-primary" style="background-image: url('image/plx-cta.jpg');">
-  <div class="cta-block">
-    <div class="container">
-      <div class="content row">
-        <div class="cta-sameline">
-          <h2>Have a question about cover?</h2>
-          <p>No jargon, no pressure—just clear next steps for your family’s protection.</p>
-          <a class="btn btn-alt" href="contact.html">Contact Ankit</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><div class="copyright style-v2">
-    <div class="container">
-      <div class="row">
+
+    <div class="footer-widget style-v2 section-pad-md">
+      <div class="container">
         <div class="row">
-          <div class="site-copy col-sm-7">
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Ankit Panchal & Associates • <a href="privacy.html">Privacy Policy</a></p>
+          <div class="widget-row row">
+            <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
+              <!-- Each Widget -->
+              <div class="wgs wgs-footer wgs-text">
+                <div class="wgs-content">
+                  <p>
+                    <img
+                      src="image/Logomain.png"
+                      srcset="image/logo2x.png 2x"
+                      alt=""
+                    />
+                  </p>
+                  <p>
+                    Clear, trustworthy, and practical financial guidance from
+                    Ankit Panchal in Ahmedabad, Gujarat—helping families and
+                    professionals make smarter money decisions with transparent,
+                    unbiased advice.
+                  </p>
+                </div>
+              </div>
+              <!-- End Widget -->
+            </div>
+            <div
+              class="footer-col col-md-3 col-sm-6 col-md-offset-1 res-m-bttm"
+            >
+              <!-- Each Widget -->
+              <div class="wgs wgs-footer wgs-menu">
+                <h5 class="wgs-title">Our Services</h5>
+                <div class="wgs-content">
+                  <ul class="menu">
+                    <li><a href="Retirement.html">Retirement Planning</a></li>
+                    <li><a href="Insurance.html">Insurance Planning</a></li>
+                    <li><a href="Loan.html">Loan Advisory</a></li>
+                    <li><a href="Investment.html">Investment Planning</a></li>
+                    <li><a href="Tax.html">Tax Planning</a></li>
+                    <li>
+                      <a href="Children.html">Children’s Education Planning</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Widget -->
+            </div>
+            <div class="footer-col col-md-2 col-sm-6 res-m-bttm">
+              <!-- Each Widget -->
+              <div class="wgs wgs-footer wgs-menu">
+                <h5 class="wgs-title">Quick Links</h5>
+                <div class="wgs-content">
+                  <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="consulatant.html">Free Consultation</a></li>
+                    <li><a href="#">Testimonial</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Widget -->
+            </div>
+
+            <div class="footer-col col-md-3 col-sm-6">
+              <!-- Each Widget -->
+              <div class="wgs wgs-footer">
+                <h5 class="wgs-title">Get In Touch</h5>
+                <div class="wgs-content">
+                  <p>Ahmedabad, Gujarat</p>
+                  <p>
+                    <span>Contact Us: +91 98765 43210 </span>
+                  </p>
+                  <ul class="social">
+                    <li>
+                      <a href="#"
+                        ><em class="fa fa-facebook" aria-hidden="true"></em
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><em class="fa fa-twitter" aria-hidden="true"></em
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#"
+                        ><em class="fa fa-linkedin" aria-hidden="true"></em
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Widget -->
+            </div>
           </div>
-          <div class="site-by col-sm-5 al-right">
-            <p>Template adapted for project use.</p>
+          <!-- Widget Row -->
+        </div>
+      </div>
+    </div>
+    <!-- End Footer Widget -->
+
+    <!-- Copyright -->
+    <div class="copyright style-v2">
+      <div class="container">
+        <div class="row">
+          <div class="row">
+            <div class="site-copy col-sm-7">
+              <p>
+                &copy; Ankit Panchal & Associates
+                <a href="privacy.html">Policy</a>
+              </p>
+            </div>
+            <div class="site-by col-sm-5 al-right">
+              <a href="privacy.html">Privacy Policy</a>
+              <a href="terms.html">Terms And Condition</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="js/jquery.bundle.js"></script>
-  <script src="js/script.js"></script>
-</body>
+
+    <!-- Rreload Image for Slider -->
+    <div class="preload hide">
+      <img alt="" src="image/slider-lg-a.jpg" />
+      <img alt="" src="image/slider-lg-b.jpg" />
+    </div>
+    <!-- End -->
+
+    <!-- Preloader !active please if you want -->
+    <!-- <div id="preloader"><div id="status">&nbsp;</div></div> -->
+    <!-- Preloader End -->
+
+    <!-- JavaScript Bundle -->
+    <script src="js/jquery.bundle.js"></script>
+    <!-- Theme Script init() -->
+    <script src="js/script.js"></script>
+    <!-- End script -->
+  </body>
 </html>
