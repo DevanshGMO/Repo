@@ -5930,3 +5930,12 @@ div[class*="filtered-menu"].style-v2 li:last-child {
     width: 100%;
   }
 }
+
+
+ @media (max-width: 767px) {
+  .navoqw {
+    position: fixed;
+    z-index: 100;
+    top: 100px;
+  }
+} 
