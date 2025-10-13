@@ -132,142 +132,51 @@
     </script>
   </head>
   <body class="site-body style-v1">
-    <header class="site-header header-s1 is-transparent is-sticky">
-      <!-- Topbar -->
-
-      <!-- #end Topbar -->
-      <!-- Navbar -->
-      <div class="navbar navbar-primary">
-        <div
-          class="container"
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          "
-        >
-          <!-- Logo -->
-          <a class="navbar-brand" href="index.html">
-            <img
-              class="logo logo-light"
-              alt="Ankit Panchal & Associates"
-              src="image/Logomain.png"
-              srcset="image/Logomain.png"
-            />
-
-            <img
-              class="logo logo-light"
-              alt=""
-              src="image/Logomain.png"
-              srcset="image/Logomain.png"
-            />
-          </a>
-          <!-- #end Logo -->
-          <div class="navbar-header">
-            <button
-              type="button"
-              class="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#mainnav"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Menu</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Q-Button for Mobile -->
-            <div class="quote-btn">
-              <a class="btn" href="get-a-quote.html">Sign in</a>
-            </div>
-          </div>
-          <!-- MainNav -->
-          <nav
-            class="navbar-collapse collapse"
-            id="mainnav"
+    <div data-include="header"></div>
+    <script
+      src="partials/include-header.js"
+      data-header-src="partials/header.html"
+    ></script>
+    <div
+      id="slider"
+      class="banner banner-slider slider-large carousel slide carousel-fade"
+    >
+      <div class="carousel-inner">
+        <div class="item active">
+          <div
+            class="fill"
+            style="background-image: url('image/slider-lg-a.jpg')"
           >
-            <ul class="nav navbar-nav">
-              <li class="dropdown"><a href="index.html">Home</a></li>
-              <li class="dropdown active">
-                <a href="about-us.html">About us</a>
-              </li>
-              <li class="dropdown">
-                <a href="service.html" class="dropdown-toggle"
-                  >Services <b class="caret"></b
-                ></a>
-                <ul class="dropdown-menu">
-                  <li><a href="Retirement.html">Retirement Planning</a></li>
-                  <li><a href="Insurance.html">Insurance Planning</a></li>
-                  <li><a href="Loan.html">Loan Advisory</a></li>
-                  <li><a href="Tax.html">Tax Planning</a></li>
-                  <li>
-                    <a href="Investment.html">Investment Planning</a>
-                  </li>
-                  <li>
-                    <a href="Children.html">Children’s Education Planning</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="resources.html">Resources</a></li>
-              <li><a href="testimonial.html">Testimonial</a></li>
-              <li><a href="consulatant.html">Free Consultation</a></li>
-               <li class="quote-btn">
-                <a class="btn" href="contact.html"">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- #end MainNav -->
-        </div>
-      </div>
-      <!-- #end Navbar -->
-      <!-- Banner/Slider -->
-      <div
-        id="slider"
-        class="banner banner-slider slider-large carousel slide carousel-fade"
-      >
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <!-- Set the first background image using inline CSS below. -->
-            <div
-              class="fill"
-              style="background-image: url('image/slider-lg-a.jpg')"
-            >
-              <div class="banner-content">
-                <div class="container">
-                  <div class="row">
-                    <div class="banner-text al-left pos-left light">
-                      <h2>
-                        About Us<strong>.</strong>
-                      </h2>
-                      <p>
-                        Financial Planning, Retirement, Insurance & Loans with
-                        Ankit Panchal – Your Friendly Financial Consultant in
-                        Ahmedabad
-                      </p>
-                      <a href="contact.html" class="btn"
-                        >Book Your 30-Minute Free Consultation Now</a
-                      >
-                    </div>
+            <div class="banner-content">
+              <div class="container">
+                <div class="row">
+                  <div class="banner-text al-left pos-left light">
+                    <h2>About Us<strong>.</strong></h2>
+                    <p>
+                      Financial Planning, retirement, Insurance &amp; Loans with
+                      Ankit Panchal – Your Friendly Financial Consultant in
+                      Ahmedabad
+                    </p>
+                    <a href="contact.html" class="btn"
+                      >Book Your 30-Minute Free Consultation Now</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
         </div>
-        <!-- Left and right controls -->
-       
+        <!-- /.item -->
       </div>
-      <!-- #end Banner/Slider -->
-    </header>
+    </div>
+
     <div class="section section-contents section-pad">
       <div class="container">
         <div class="content row row-vm">
           <div class="col-sm-7 npl pad-r res-m-bttm">
-            <h2 class="heading-lg">About Us</h2>
+            <h2 class="heading-lg" style="color: #253157; font-weight: 600;">About Us</h2>
             <p class="lead">
-              Hello, I’m Ankit Panchal — thank you for visiting! I believe
+              Hello, I’m <strong>Ankit Panchal</strong> — thank you for visiting! I believe
               financial planning is not just about numbers; it’s about building
               confidence and peace of mind for your future.
             </p>
@@ -395,104 +304,79 @@
     </div>
     <!-- End Why Choose -->
 
-    <!-- Testimonials -->
-    <div class="section section-quotes section-pad">
-      <div class="container">
-        <div class="content row">
-          <div class="col-md-offset-2 col-md-8 center">
-            <h5 class="heading-sm-lead">The People Say</h5>
-            <h2 class="heading-section">Testimonials</h2>
-          </div>
-          <div class="gaps"></div>
-          <div class="testimonials">
-            <div
-              id="testimonial"
-              class="quotes-slider col-md-8 col-md-offset-2"
-            >
-              <div
-                class="owl-carousel loop has-carousel"
-                data-items="1"
-                data-loop="true"
-                data-dots="true"
-                data-auto="true"
-              >
-                <div class="item">
-                  <!-- Each Quotes -->
-                  <div class="quotes">
-                    <div class="quotes-text center">
-                      <p>
-                        Ankit helped us plan for our daughter’s education and
-                        gave us peace of mind for the future. Truly trustworthy!
-                      </p>
-                    </div>
-                    <div class="profile">
-                      <img src="image/profile-img.jpg" alt="" />
-                      <h5>Mehta Family,</h5>
-                      <h6>Ahmedabad</h6>
-                    </div>
-                  </div>
-                  <!-- End Quotes -->
+   <div class="section section-quotes section-pad">
+  <div class="container">
+    <div class="content row">
+      <div class="col-md-offset-2 col-md-8 center">
+        <h5 class="heading-sm-lead">The People Say</h5>
+        <h2 class="heading-section" style="color: #253157; font-weight: 600;">Testimonials</h2>
+      </div>
+      <div class="gaps"></div>
+
+      <div class="testimonials">
+        <div id="testimonial" class="quotes-slider col-md-8 col-md-offset-2">
+          <div
+            class="owl-carousel loop has-carousel"
+            data-items="1"
+            data-loop="true"
+            data-dots="true"
+            data-auto="true"
+          >
+            <!-- Slide 1: Bhavesh Suthar -->
+            <div class="item">
+              <div class="quotes">
+                <div class="quotes-text center">
+                  <p>
+                    From Bhavesh Suthar: I am very thankful to Mr. Ankit Panchal for helping me with my investments in India. He is a knowledgeable and professional financial consultant and broker. He clearly explained various investment options and guided me to choose the best one that suits my needs. He provides excellent service and regularly reviews my portfolio. He handles everything smoothly, so I don’t have to worry about any details. I truly appreciate his honest advice and dedicated support. I highly recommend his services to anyone looking for a reliable financial advisor. — Bhavesh
+                  </p>
                 </div>
-                <!-- End Slide -->
-                <!-- Each Slide -->
-                <div class="item">
-                  <!-- Each Quotes -->
-                  <div class="quotes">
-                    <div class="quotes-text center">
-                      <p>
-                        Ankit guided us with patience and clarity. Thanks to
-                        him, our retirement is secure and stress-free.
-                      </p>
-                    </div>
-                    <div class="profile">
-                      <img src="image/profile-img.jpg" alt="" />
-                      <h5>Patel Family,</h5>
-                      <h6>Gandhinagar</h6>
-                    </div>
-                  </div>
-                  <!-- End Quotes -->
-                </div>
-                <div class="item">
-                  <!-- Each Quotes -->
-                  <div class="quotes">
-                    <div class="quotes-text center">
-                      <p>
-                        The best part? He always treats us like family, not
-                        clients.
-                      </p>
-                    </div>
-                    <div class="profile">
-                      <img src="image/profile-img.jpg" alt="" />
-                      <h5>Mrs. Desai,</h5>
-                      <h6>Surat.</h6>
-                    </div>
-                  </div>
-                  <!-- End Quotes -->
-                </div>
-                <div class="item">
-                  <!-- Each Quotes -->
-                  <div class="quotes">
-                    <div class="quotes-text center">
-                      <p>
-                        We were confused about loans and investments. Ankit made
-                        everything simple and easy.
-                      </p>
-                    </div>
-                    <div class="profile">
-                      <img src="image/profile-img.jpg" alt="" />
-                      <h5>Shah Brothers,</h5>
-                      <h6>Ahmedabad.</h6>
-                    </div>
-                  </div>
-                  <!-- End Quotes -->
+                <div class="profile">
+                  <img src="image/Bhavesh.jpg" alt="" />
+                  <h5>Bhavesh Suthar</h5>
+                  <h6></h6>
                 </div>
               </div>
-              <!-- End Slide -->
+            </div>
+
+            <!-- Slide 2: Dr. Anil Mahato -->
+            <div class="item">
+              <div class="quotes">
+                <div class="quotes-text center">
+                  <p>
+                    "Ankit’s advice helped me secure the right loan and insurance options that fit my needs perfectly. He is not just knowledgeable but also very approachable and trustworthy. With his guidance, managing my finances feels less overwhelming and more empowering. Highly recommend for anyone looking to build a secure financial future!"
+                  </p>
+                </div>
+                <div class="profile">
+                  <img src="image/doctor.jpg" alt="" />
+                  <h5>Dr. Anil Mahato</h5>
+                  <h6></h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Hiren Joshi -->
+            <div class="item">
+              <div class="quotes">
+                <div class="quotes-text center">
+                  <p>
+                    "I never thought financial planning could be so simple and reassuring until I met Ankit. He patiently understood my goals and explained each step clearly without jargon. Thanks to his personalized approach, I feel confident about my retirement and insurance plans. His support has truly made a difference for me and my family."
+                  </p>
+                </div>
+                <div class="profile">
+                  <img src="image/Hiren.jpg" alt="" />
+                  <h5>Hiren Joshi</h5>
+                  <h6></h6>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- End carousel -->
         </div>
       </div>
     </div>
+  </div>
+</div>
+
     <!-- End Section -->
     <!-- Teams -->
 
@@ -546,126 +430,11 @@
         </div>
       </div>
     </div>
-    <!-- End Section -->
-    <div class="footer-widget style-v2 section-pad-md">
-      <div class="container">
-        <div class="row">
-          <div class="widget-row row">
-            <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer wgs-text">
-                <div class="wgs-content">
-                  <p>
-                    <img
-                      src="image/Logomain.png"
-                      srcset="image/logo2x.png 2x"
-                      alt=""
-                    />
-                  </p>
-                  <p>
-                    Clear, trustworthy, and practical financial guidance from
-                    Ankit Panchal in Ahmedabad, Gujarat—helping families and
-                    professionals make smarter money decisions with transparent,
-                    unbiased advice.
-                  </p>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
-            <div
-              class="footer-col col-md-3 col-sm-6 col-md-offset-1 res-m-bttm"
-            >
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer wgs-menu">
-                <h5 class="wgs-title">Our Services</h5>
-                <div class="wgs-content">
-                  <ul class="menu">
-                    <li><a href="Retirement.html">Retirement Planning</a></li>
-                    <li><a href="insurance.html">Insurance Planning</a></li>
-                    <li><a href="Loan.html">Loan Advisory</a></li>
-                    <li><a href="Investment.html">Investment Planning</a></li>
-                    <li><a href="Tax.html">Tax Planning</a></li>
-                    <li>
-                      <a href="Children.html">Children’s Education Planning</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
-            <div class="footer-col col-md-2 col-sm-6 res-m-bttm">
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer wgs-menu">
-                <h5 class="wgs-title">Quick Links</h5>
-                <div class="wgs-content">
-                  <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="consulatant.html">Free Consultation</a></li>
-                    <li><a href="testimonial.html">Testimonial</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
-
-            <div class="footer-col col-md-3 col-sm-6">
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer">
-                <h5 class="wgs-title">Get In Touch</h5>
-                <div class="wgs-content">
-                  <p>Ahmedabad, Gujarat</p>
-                  <p>
-                    <span>Contact Us: +91 98765 43210 </span>
-                  </p>
-                  <ul class="social">
-                    <li>
-                      <a href="#"
-                        ><em class="fa fa-facebook" aria-hidden="true"></em
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><em class="fa fa-twitter" aria-hidden="true"></em
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><em class="fa fa-linkedin" aria-hidden="true"></em
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
-          </div>
-          <!-- Widget Row -->
-        </div>
-      </div>
-    </div>
-
-    <div class="copyright style-v2">
-      <div class="container">
-        <div class="row">
-          <div class="row">
-            <div class="site-copy col-sm-7">
-              <p>
-                &copy; Ankit Panchal & Associates
-                <a href="privacy.html">Policy</a>
-              </p>
-            </div>
-            <div class="site-by col-sm-5 al-right">
-              <a href="privacy.html">Privacy Policy</a>
-              <a href="terms.html">Terms And Condition</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div data-include="footer"></div>
+    <script
+      src="partials/include-footer.js"
+      data-footer-src="partials/footer.html"
+    ></script>
 
     <!-- JavaScript Bundle -->
     <script src="js/jquery.bundle.js"></script>

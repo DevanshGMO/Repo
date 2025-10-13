@@ -164,120 +164,42 @@
     </script>
   </head>
   <body class="site-body style-v1">
-    <header class="site-header header-s1 is-transparent is-sticky">
-      <!-- Topbar -->
-     
-      <!-- #end Topbar -->
-      <!-- Navbar -->
-      <div class="navbar navbar-primary">
-        <div class="container" style="display: flex; align-items: center; justify-content: space-between ;">
-          <!-- Logo -->
-          <a class="navbar-brand" href="index.html">
-            <img
-              class="logo logo-light"
-              alt="Ankit Panchal & Associates"
-              src="image/Logomain.png"
-              srcset="image/Logomain.png"
-            />
-
-            <img
-              class="logo logo-light"
-              alt=""
-              src="image/Logomain.png"
-              srcset="image/Logomain.png"
-            />
-          </a>
-          <!-- #end Logo -->
-          <div class="navbar-header">
-            <button
-              type="button"
-              class="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#mainnav"
-              aria-expanded="false"
-            >
-              <span class="sr-only">Menu</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Q-Button for Mobile -->
-            <div class="quote-btn">
-              <a class="btn" href="get-a-quote.html">Sign in</a>
-            </div>
-          </div>
-          <!-- MainNav -->
-          <nav class="navbar-collapse collapse navoqw"  id="mainnav">
-            <ul class="nav navbar-nav">
-              <li class="dropdown"><a href="index.html">Home</a></li>
-              <li class="dropdown"><a href="about-us.html">About us</a></li>
-              <li class="dropdown">
-                <a href="service.html" class="dropdown-toggle"
-                  >Services <b class="caret"></b
-                ></a>
-                <ul class="dropdown-menu">
-                  <li><a href="Retirement.html">Retirement Planning</a></li>
-                  <li><a href="Insurance.html">Insurance Planning</a></li>
-                  <li><a href="Loan.html">Loan Advisory</a></li>
-                  <li><a href="Tax.html">Tax Planning</a></li>
-                  <li>
-                    <a href="Investment.html">Investment Planning</a>
-                  </li>
-                  <li>
-                    <a href="Children.html">Children’s Education Planning</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="resources.html">Resources</a></li>
-              <li><a href="testimonial.html">Testimonial</a></li>
-              <li><a href="consulatant.html">Free Consultation</a></li>
-               <li class="quote-btn">
-                <a class="btn" href="contact.html"">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- #end MainNav -->
-        </div>
-      </div>
-      <!-- #end Navbar -->
-      <!-- Banner/Slider -->
-      <div
-        id="slider"
-        class="banner banner-slider slider-large carousel slide carousel-fade"
-      >
-        <!-- Wrapper for Slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <!-- Set the first background image using inline CSS below. -->
-            <div
-              class="fill"
-              style="background-image: url('image/slider-lg-a.jpg')"
-            >
-              <div class="banner-content">
-                <div class="container">
-                  <div class="row">
-                    <div class="banner-text al-left pos-left light">
-                      <h2>
-                        Free Consultation<strong>.</strong>
-                      </h2>
-                      <p>
-                        Financial Planning, Retirement, Insurance & Loans with
-                        Ankit Panchal – Your Friendly Financial Consultant in
-                        Ahmedabad
-                      </p>
-                      <a href="contact.html" class="btn"
-                        >Book Your 30-Minute Free Consultation Now</a
-                      >
-                    </div>
+  <div data-include="header"></div>
+    <script
+      src="partials/include-header.js"
+      data-header-src="partials/header.html"
+    ></script><div
+      id="slider"
+      class="banner banner-slider slider-large carousel slide carousel-fade"
+    >
+      <div class="carousel-inner">
+        <div class="item active">
+          <div
+            class="fill"
+            style="background-image: url('image/slider-lg-a.jpg')"
+          >
+            <div class="banner-content">
+              <div class="container">
+                <div class="row">
+                  <div class="banner-text al-left pos-left light">
+                    <h2>Free Consultation<strong>.</strong></h2>
+                    <p>
+                      Financial Planning, retirement, Insurance &amp; Loans with
+                      Ankit Panchal – Your Friendly Financial Consultant in
+                      Ahmedabad
+                    </p>
+                    <a href="contact.html" class="btn"
+                      >Book Your 30-Minute Free Consultation Now</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- /.item -->
       </div>
-      <!-- #end Banner/Slider -->
-    </header>
+    </div>
     <div class="section section-pad">
       <div class="container">
         <div class="row">
@@ -335,7 +257,7 @@
                   required
                 >
                   <option value="">-- Select a topic --</option>
-                  <option>Retirement Planning</option>
+                  <option>retirement Planning</option>
                   <option>Insurance Planning</option>
                   <option>Loan Advisory</option>
                   <option>Investment Planning</option>
@@ -369,137 +291,26 @@
       class="call-action cta-small has-bg bg-primary"
       style="background-image: url('image/plx-cta.jpg')"
     >
-      <div class="cta-block">
-        <div class="container text-center">
-          <h2>Have Questions Before Booking?</h2>
-          <p>
-            Email us at
-            <a href="mailto:info@ankitpanchalfinance.com"
-              >info@ankitpanchalfinance.com</a
-            >
-            or call us at <strong>+91 98765 43210</strong>.
-          </p>
-        </div>
-      </div>
-    </div>
-     <div class="footer-widget style-v2 section-pad-md">
-      <div class="container">
-        <div class="row">
-          <div class="widget-row row">
-            <div class="footer-col col-md-3 col-sm-6 res-m-bttm">
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer wgs-text">
-                <div class="wgs-content">
-                  <p>
-                    <img
-                      src="image/Logomain.png"
-                      srcset="image/logo2x.png 2x"
-                      alt=""
-                    />
-                  </p>
-                  <p>
-                    Clear, trustworthy, and practical financial guidance from
-                    Ankit Panchal in Ahmedabad, Gujarat—helping families and
-                    professionals make smarter money decisions with transparent,
-                    unbiased advice.
-                  </p>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
-            <div
-              class="footer-col col-md-3 col-sm-6 col-md-offset-1 res-m-bttm"
-            >
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer wgs-menu">
-                <h5 class="wgs-title">Our Services</h5>
-                <div class="wgs-content">
-                  <ul class="menu">
-                    <li><a href="Retirement.html">Retirement Planning</a></li>
-                    <li><a href="insurance.html">Insurance Planning</a></li>
-                    <li><a href="Loan.html">Loan Advisory</a></li>
-                    <li><a href="Investment.html">Investment Planning</a></li>
-                    <li><a href="Tax.html">Tax Planning</a></li>
-                    <li>
-                      <a href="Children.html">Children’s Education Planning</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
-            <div class="footer-col col-md-2 col-sm-6 res-m-bttm">
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer wgs-menu">
-                <h5 class="wgs-title">Quick Links</h5>
-                <div class="wgs-content">
-                  <ul class="menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="consulatant.html">Free Consultation</a></li>
-                    <li><a href="testimonial.html">Testimonial</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
+     <div class="cta-block">
+  <div class="container text-center">
+    <h2>Have Questions Please Contact Us.</h2>
+    <p>
+      Email us at
+      <a href="mailto:info@ankitpanchalfinance.com">info@ankitpanchalfinance.com</a>
+      or call us at
+      <a href="tel:+919876543210" style="text-decoration:none; color:#ffff;">
+        <strong>+91 98765 43210</strong>
+      </a>.
+    </p>
+  </div>
+</div>
 
-            <div class="footer-col col-md-3 col-sm-6">
-              <!-- Each Widget -->
-              <div class="wgs wgs-footer">
-                <h5 class="wgs-title">Get In Touch</h5>
-                <div class="wgs-content">
-                  <p>Ahmedabad, Gujarat</p>
-                  <p>
-                    <span>Contact Us: +91 98765 43210 </span>
-                  </p>
-                  <ul class="social">
-                    <li>
-                      <a href="#"
-                        ><em class="fa fa-facebook" aria-hidden="true"></em
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><em class="fa fa-twitter" aria-hidden="true"></em
-                      ></a>
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><em class="fa fa-linkedin" aria-hidden="true"></em
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Widget -->
-            </div>
-          </div>
-          <!-- Widget Row -->
-        </div>
-      </div>
     </div>
-
-    <!-- Copyright -->
-    <div class="copyright style-v2">
-      <div class="container">
-        <div class="row">
-          <div class="row">
-            <div class="site-copy col-sm-7">
-              <p>&copy; Ankit Panchal & Associates <a href="privacy.html">Policy</a></p>
-            </div>
-            <div class="site-by col-sm-5 al-right">
-              <a href="privacy.html">Privacy Policy</a>
-              <a href="terms.html">Terms And Condition</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+   <div data-include="footer"></div>
+    <script
+      src="partials/include-footer.js"
+      data-footer-src="partials/footer.html"
+    ></script>
     <!-- Rreload Image for Slider -->
     <div class="preload hide">
       <img alt="" src="image/slider-lg-a.jpg" />
