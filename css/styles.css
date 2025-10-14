@@ -601,6 +601,26 @@ input:focus {
   opacity: 0;
   transition: opacity 0.4s;
 }
+/* Footer logo: slightly larger but still responsive */
+.footer-widget.style-v2 .wgs-text .footer-logo {
+  height: 98px !important;   /* was ~58px */
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Scale down gently on smaller screens */
+@media (max-width: 1199px) { 
+  .footer-widget.style-v2 .wgs-text .footer-logo { height: 66px !important; }
+}
+@media (max-width: 991px) { 
+  .footer-widget.style-v2 .wgs-text .footer-logo { height: 60px !important; }
+}
+@media (max-width: 767px) { 
+  .footer-widget.style-v2 .wgs-text .footer-logo { height: 54px !important; }
+}
+
 .fixed-bg .imagebg {
   background-attachment: fixed;
 }
@@ -621,7 +641,7 @@ input:focus {
   position: relative;
 }
 .bg-image-loaded {
-  opacity: 0.2;
+  opacity: 1;
 }
 .has-bg,
 .fixed-bg {

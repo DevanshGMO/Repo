@@ -105,6 +105,26 @@
           height: 52px;
         }
       }
+      .banner .fill {
+        position: relative;
+      }
+      /* Full-cover black overlay (adjust opacity as needed) */
+      .banner .fill .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25); /* 0.45 = 45% black */
+        pointer-events: none; /* clicks pass through */
+      }
+      /* Keep text above the overlay */
+      .banner .banner-content {
+        position: relative;
+        z-index: 1;
+      }
+      .section-services .feature-row.feature-service-row {
+        background: #fff; /* so the shadow looks solid */
+        box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+        padding: 16px; /* keeps cards off the rounded edge */
+      }
     </style>
     <script>
       (function (i, s, o, g, r, a, m) {
@@ -139,59 +159,93 @@
       src="partials/include-header.js"
       data-header-src="partials/header.html"
     ></script>
-  <div id="slider" class="banner banner-slider slider-large carousel slide carousel-fade">
-    <div class="carousel-inner">
-      <div class="item active">
-        <div class="fill" style="background-image: url('image/slider-lg-a.jpg')">
-          <div class="banner-content">
-            <div class="container">
-              <div class="row">
-                <div class="banner-text al-left pos-left light">
-                  <h2>
-                    Helping You Achieve Financial Freedom with Trusted Planning<strong>.</strong>
-                  </h2>
-                  <p>
-                    Financial Planning, Retirement, Insurance &amp; Loans with
-                    Ankit Panchal – Your Friendly Financial Consultant in Ahmedabad
-                  </p>
-                  <a href="contact.html" class="btn">Book Your 30-Minute Free Consultation Now</a>
+    <div
+      id="slider"
+      class="banner banner-slider slider-large carousel slide carousel-fade"
+    >
+      <div class="carousel-inner">
+        <div class="item active">
+          <div
+            class="fill"
+            style="background-image: url('image/slider-lg-a.jpg')"
+          >
+            <div class="overlay"></div>
+            <div class="banner-content">
+              <div class="container">
+                <div class="row">
+                  <div class="banner-text al-left pos-left light">
+                    <h2>
+                      Helping You Achieve Financial Freedom with Trusted
+                      Planning<strong>.</strong>
+                    </h2>
+                    <p>
+                      Financial Planning, Retirement, Insurance &amp; Loans with
+                      Ankit Panchal – Your Friendly Financial Consultant in
+                      Ahmedabad
+                    </p>
+                    <a href="contact.html" class="btn"
+                      >Book Your 30-Minute Free Consultation Now</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div><!-- /.item -->
+        <!-- /.item -->
 
-      <div class="item">
-        <div class="fill" style="background-image: url('image/slider-lg-b.jpg')">
-          <div class="banner-content">
-            <div class="container">
-              <div class="row">
-                <div class="banner-text al-left pos-left light">
-                  <h2>Expert Financial Advice<strong>.</strong></h2>
-                  <p>
-                    We help clients find ways to turn into actionable insights by
-                    embedding economics across their organization’s strategy.
-                  </p>
-                  <a href="contact.html" class="btn">Learn more</a>
+        <div class="item">
+          <div
+            class="fill"
+            style="background-image: url('image/slider-lg-b.jpg')"
+          >
+            <div class="overlay"></div>
+            <div class="banner-content">
+              <div class="container">
+                <div class="row">
+                  <div class="banner-text al-left pos-left light">
+                    <h2>Expert Financial Advice<strong>.</strong></h2>
+                    <p>
+                      We help clients find ways to turn into actionable insights
+                      by embedding economics across their organization’s
+                      strategy.
+                    </p>
+                    <a href="contact.html" class="btn">Learn more</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div><!-- /.item -->
+        <!-- /.item -->
+      </div>
+
+      <!-- Controls -->
+      <a
+        class="left carousel-control"
+        href="#slider"
+        role="button"
+        data-slide="prev"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-left"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="right carousel-control"
+        href="#slider"
+        role="button"
+        data-slide="next"
+      >
+        <span
+          class="glyphicon glyphicon-chevron-right"
+          aria-hidden="true"
+        ></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#slider" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
     <div class="section section-services">
       <div class="container">
         <div class="content row">
@@ -201,7 +255,9 @@
           >
             <div class="heading-box clearfix">
               <div class="col-sm-3">
-                <h2 class="heading-section">Financial Specialists</h2>
+                <h2 class="heading-section" style="color: #253157">
+                  Financial Specialists
+                </h2>
               </div>
               <div class="col-sm-8 col-sm-offset-1">
                 <span
@@ -308,18 +364,18 @@
         <div class="content row">
           <div class="row row-vm">
             <div class="col-md-6 res-m-bttm">
-              <h5 class="heading-sm-lead">About us</h5>
-              <h2 class="heading-section">Who we are</h2>
-              <p>
+              <h5 class="heading-sm-lead" style="color: #000000">About us</h5>
+              <h2 class="heading-section" style="color: #000000">Who we are</h2>
+              <p style="color: #253157">
                 I’m <strong>Ankit Panchal</strong>, a friendly, transparent
                 financial consultant based in Ahmedabad, Gujarat.
               </p>
-              <p>
+              <p style="color: #253157">
                 My mission is simple: give clear, trustworthy, and practical
                 guidance so families and small businesses can plan confidently
                 for today and tomorrow.
               </p>
-              <p>
+              <p style="color: #253157">
                 Over the years, I’ve helped 400+ clients with Retirement,
                 insurance, investments, loans, and tax planning—always tailored
                 to each person’s goals and comfort with risk. You’ll get
@@ -340,8 +396,8 @@
     <div class="section section-contents section-pad image-on-right bg-light">
       <div class="container">
         <div class="row">
-          <h5 class="heading-sm-lead">Our Services</h5>
-          <h2 class="heading-section">What we do</h2>
+          <h5 class="heading-sm-lead" style="color: #253157">Our Services</h5>
+          <h2 class="heading-section" style="color: #253157">What we do</h2>
           <div class="feature-intro">
             <div class="row">
               <div class="col-sm-7 col-md-6">
@@ -350,7 +406,7 @@
                     <div class="icon-box style-s1 photo-plx-full">
                       <em class="fa fa-bar-chart-o" aria-hidden="true"></em>
                     </div>
-                    <h4>Retirement Planning</h4>
+                    <h4 style="color: #253157">Retirement Planning</h4>
                     <p>
                       Create a clear, step-by-step plan so you can retire with
                       confidence and financial independence.
@@ -360,7 +416,7 @@
                     <div class="icon-box style-s1">
                       <em class="fa fa-users" aria-hidden="true"></em>
                     </div>
-                    <h4>Insurance Planning</h4>
+                    <h4 style="color: #253157">Insurance Planning</h4>
                     <p>
                       Simplify health & life cover choices so you’re protected
                       without overpaying.
@@ -371,7 +427,7 @@
                     <div class="icon-box style-s1">
                       <em class="fa fa-credit-card" aria-hidden="true"></em>
                     </div>
-                    <h4>Loan Advisory</h4>
+                    <h4 style="color: #253157">Loan Advisory</h4>
                     <p>
                       Smart guidance on home, personal, and business loans to
                       save money and reduce stress.
@@ -381,7 +437,7 @@
                     <div class="icon-box style-s1">
                       <em class="fa fa-trademark" aria-hidden="true"></em>
                     </div>
-                    <h4>Tax Planning</h4>
+                    <h4 style="color: #253157">Tax Planning</h4>
                     <p>
                       Use the right strategies so you save more and stay
                       compliant.
@@ -392,7 +448,7 @@
                     <div class="icon-box style-s1">
                       <em class="fa fa-trademark" aria-hidden="true"></em>
                     </div>
-                    <h4>Children’s Education Planning</h4>
+                    <h4 style="color: #253157">Children’s Education Planning</h4>
                     <p>
                       Prepare financially for school, college, and higher
                       education so nothing stands in their way.
@@ -402,7 +458,7 @@
                     <div class="icon-box style-s1">
                       <em class="fa fa-trademark" aria-hidden="true"></em>
                     </div>
-                    <h4>Investment Planning</h4>
+                    <h4 style="color: #253157">Investment Planning</h4>
                     <p>
                       Invest wisely across mutual funds, equities, and more
                       balancing risk and reward to grow wealth.
@@ -414,85 +470,112 @@
           </div>
         </div>
       </div>
-      <div class="section-bg imagebg" style="opacity: 1;">
+      <div class="section-bg imagebg" style="opacity: 1">
         <img src="image/photo-half-a.jpg" alt="" />
       </div>
     </div>
     <!-- End Content -->
 
     <!-- Testimonials -->
-<div class="section section-quotes section-pad">
-  <div class="container">
-    <div class="content row">
-      <div class="col-md-offset-2 col-md-8 center">
-        <h5 class="heading-sm-lead">The People Say</h5>
-        <h2 class="heading-section">Testimonials</h2>
-      </div>
-      <div class="gaps"></div>
+    <div class="section section-quotes section-pad">
+      <div class="container">
+        <div class="content row">
+          <div class="col-md-offset-2 col-md-8 center">
+            <h5 class="heading-sm-lead" style="color: #253157">
+              The People Say
+            </h5>
+            <h2 class="heading-section" style="color: #253157">Testimonials</h2>
+          </div>
+          <div class="gaps"></div>
 
-      <div class="testimonials">
-        <div id="testimonial" class="quotes-slider col-md-8 col-md-offset-2">
-          <div
-            class="owl-carousel loop has-carousel"
-            data-items="1"
-            data-loop="true"
-            data-dots="true"
-            data-auto="true"
-          >
-            <!-- Slide 1: Bhavesh Suthar -->
-            <div class="item">
-              <div class="quotes">
-                <div class="quotes-text center">
-                  <p>
-                    From Bhavesh Suthar: I am very thankful to Mr. Ankit Panchal for helping me with my investments in India. He is a knowledgeable and professional financial consultant and broker. He clearly explained various investment options and guided me to choose the best one that suits my needs. He provides excellent service and regularly reviews my portfolio. He handles everything smoothly, so I don’t have to worry about any details. I truly appreciate his honest advice and dedicated support. I highly recommend his services to anyone looking for a reliable financial advisor. — Bhavesh
-                  </p>
+          <div class="testimonials">
+            <div
+              id="testimonial"
+              class="quotes-slider col-md-8 col-md-offset-2"
+            >
+              <div
+                class="owl-carousel loop has-carousel"
+                data-items="1"
+                data-loop="true"
+                data-dots="true"
+                data-auto="true"
+              >
+                <!-- Slide 1: Bhavesh Suthar -->
+                <div class="item">
+                  <div class="quotes">
+                    <div class="quotes-text center">
+                      <p>
+                        From Bhavesh Suthar: I am very thankful to Mr. Ankit
+                        Panchal for helping me with my investments in India. He
+                        is a knowledgeable and professional financial consultant
+                        and broker. He clearly explained various investment
+                        options and guided me to choose the best one that suits
+                        my needs. He provides excellent service and regularly
+                        reviews my portfolio. He handles everything smoothly, so
+                        I don’t have to worry about any details. I truly
+                        appreciate his honest advice and dedicated support. I
+                        highly recommend his services to anyone looking for a
+                        reliable financial advisor. — Bhavesh
+                      </p>
+                    </div>
+                    <div class="profile">
+                      <img src="image/Bhavesh.png" alt="" />
+                      <h5>Bhavesh Suthar</h5>
+                      <h6></h6>
+                    </div>
+                  </div>
                 </div>
-                <div class="profile">
-                  <img src="image/Bhavesh.jpg" alt="" />
-                  <h5>Bhavesh Suthar</h5>
-                  <h6></h6>
+
+                <!-- Slide 2: Dr. Anil Mahato -->
+                <div class="item">
+                  <div class="quotes">
+                    <div class="quotes-text center">
+                      <p>
+                        "Ankit’s advice helped me secure the right loan and
+                        insurance options that fit my needs perfectly. He is not
+                        just knowledgeable but also very approachable and
+                        trustworthy. With his guidance, managing my finances
+                        feels less overwhelming and more empowering. Highly
+                        recommend for anyone looking to build a secure financial
+                        future!"
+                      </p>
+                    </div>
+                    <div class="profile">
+                      <img src="image/doctor.jpg" alt="" />
+                      <h5>Dr. Anil Mahato</h5>
+                      <h6></h6>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 3: Hiren Joshi -->
+                <div class="item">
+                  <div class="quotes">
+                    <div class="quotes-text center">
+                      <p>
+                        "I never thought financial planning could be so simple
+                        and reassuring until I met Ankit. He patiently
+                        understood my goals and explained each step clearly
+                        without jargon. Thanks to his personalized approach, I
+                        feel confident about my Retirement and insurance plans.
+                        His support has truly made a difference for me and my
+                        family."
+                      </p>
+                    </div>
+                    <div class="profile">
+                      <img src="image/Hiren.jpg" alt="" />
+                      <h5>Hiren Joshi</h5>
+                      <h6></h6>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <!-- Slide 2: Dr. Anil Mahato -->
-            <div class="item">
-              <div class="quotes">
-                <div class="quotes-text center">
-                  <p>
-                    "Ankit’s advice helped me secure the right loan and insurance options that fit my needs perfectly. He is not just knowledgeable but also very approachable and trustworthy. With his guidance, managing my finances feels less overwhelming and more empowering. Highly recommend for anyone looking to build a secure financial future!"
-                  </p>
-                </div>
-                <div class="profile">
-                  <img src="image/doctor.jpg" alt="" />
-                  <h5>Dr. Anil Mahato</h5>
-                  <h6></h6>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3: Hiren Joshi -->
-            <div class="item">
-              <div class="quotes">
-                <div class="quotes-text center">
-                  <p>
-                    "I never thought financial planning could be so simple and reassuring until I met Ankit. He patiently understood my goals and explained each step clearly without jargon. Thanks to his personalized approach, I feel confident about my Retirement and insurance plans. His support has truly made a difference for me and my family."
-                  </p>
-                </div>
-                <div class="profile">
-                  <img src="image/Hiren.jpg" alt="" />
-                  <h5>Hiren Joshi</h5>
-                  <h6></h6>
-                </div>
-              </div>
+              <!-- End carousel -->
             </div>
           </div>
-          <!-- End carousel -->
         </div>
       </div>
     </div>
-  </div>
-</div>
 
     <!-- End Section -->
 
@@ -630,8 +713,8 @@
     </div> -->
     <div class="section section-news section-pad">
       <div class="container">
-        <h5 class="heading-sm-lead center">Resources</h5>
-        <h2 class="heading-section center">Blogs</h2>
+        <h5 class="heading-sm-lead center" style="color: #253157;">Resources</h5>
+        <h2 class="heading-section center" style="color: #253157;">Blogs</h2>
         <div class="row blog-posts">
           <div class="post post-loop col-md-4">
             <div class="post-thumbs">
@@ -641,7 +724,7 @@
             </div>
             <div class="post-entry">
               <h2>
-                <a href="blog-Retirement.html"
+                <a href="blog-Retirement.html" style="color: #253157;"
                   >Top 5 Retirement Planning Tips in Gujarat</a
                 >
               </h2>
@@ -663,7 +746,7 @@
             </div>
             <div class="post-entry">
               <h2>
-                <a href="blog-health-insurance.html"
+                <a href="blog-health-insurance.html" style="color: #253157;"
                   >How to Choose the Right Health Insurance in India</a
                 >
               </h2>
@@ -685,7 +768,7 @@
             </div>
             <div class="post-entry">
               <h2>
-                <a href="blog-tax-2025.html"
+                <a href="blog-tax-2025.html" style="color: #253157;"
                   >What the Union Budget 2025 Means for Taxpayers</a
                 >
               </h2>

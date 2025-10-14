@@ -10,9 +10,10 @@
               <div class="wgs-content">
                 <p>
                   <img
+                    class="footer-logo"
                     src="image/Logomain.png"
                     srcset="image/logo2x.png 2x"
-                    alt=""
+                    alt="Ankit Panchal & Associates"
                   />
                 </p>
                 <p>
@@ -181,20 +182,20 @@
 </footer>
 <script>
   (function () {
-    var form = document.querySelector('.newsletter-form');
+    var form = document.querySelector(".newsletter-form");
     if (!form) return;
-    var email = form.querySelector('#newsletter-email');
-    var msg = form.querySelector('#newsletter-msg');
+    var email = form.querySelector("#newsletter-email");
+    var msg = form.querySelector("#newsletter-msg");
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!email.checkValidity()) {
-        msg.textContent = 'Please enter a valid email address.';
-        msg.style.color = '#d9534f';
+        msg.textContent = "Please enter a valid email address.";
+        msg.style.color = "#d9534f";
         return;
       }
-      msg.textContent = 'Thanks! You are subscribed.';
-      msg.style.color = '#28a745';
+      msg.textContent = "Thanks! You are subscribed.";
+      msg.style.color = "#28a745";
       form.reset();
     });
   })();
